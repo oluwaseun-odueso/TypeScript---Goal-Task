@@ -11,4 +11,4 @@ connection.connect(() => {
     console.log('Database has been connected')
 });
 
-module.exports = connection
+module.exports = {connection}
