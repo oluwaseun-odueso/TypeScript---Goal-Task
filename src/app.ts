@@ -1,3 +1,11 @@
-const greeting: string = 'Hello';
+import express, { Application, Request, Response, NextFunction } from 'express';
 
-const numbers: number[] = [1, 2, 3]
+const app: Application = express();
+
+// Get all 
+app.get('/', (req: Request, res: Response) => {
+    res.send('Welcome to the official goal tracker page.')
+})
+
+// To listen to the server
+app.listen(4000, () => console.log('Server running'));
