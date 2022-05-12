@@ -1,8 +1,7 @@
-const connection = require('./databaseConnection')
+import { connection } from './databaseConnection'
 const bcrypt = require('bcrypt');
-import dotenv from 'dotenv';
+require('dotenv').config()
 
-dotenv.config()
 
 // Necessary functions
 function updateGoalProperties(goal_id: number, category: string, goal: string, goal_status: string) {

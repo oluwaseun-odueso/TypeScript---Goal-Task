@@ -1,6 +1,6 @@
 import mysql from 'mysql'
 
-const connection = mysql.createConnection({
+export const connection = mysql.createConnection({
     host     : 'localhost',
     user     : process.env.DB_USER,
     password : process.env.DB_PASSWORD,
@@ -11,4 +11,4 @@ connection.connect(() => {
     console.log('Database has been connected')
 });
 
-module.exports = {connection}
+// module.exports = connection

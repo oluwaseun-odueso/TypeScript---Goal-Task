@@ -1,12 +1,7 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
 const connection = require('./databaseConnection');
 const bcrypt = require('bcrypt');
-const dotenv_1 = __importDefault(require("dotenv"));
-dotenv_1.default.config();
+require('dotenv').config();
 // Necessary functions
 function updateGoalProperties(goal_id, category, goal, goal_status) {
     return new Promise((resolve, reject) => {
